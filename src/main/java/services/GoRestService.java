@@ -16,21 +16,5 @@ public class GoRestService extends BaseService {
                 .post("/public/v1/users");
 
     }
-    public static Response getAllUsers(){
-        return defaultRequestSpecification()
-                .contentType(ContentType.JSON)
-                .when()
-                .get("/public/v1/users");
-    }
-    public static Response updateUser(){
-        Map<String,String > reqBody = new HashMap<>();
-        reqBody.put("name", "Ali");
-        reqBody.put("email","comide@efa.co");
-        return defaultRequestSpecification()
-                .pathParam("id",3464)
-                .contentType(ContentType.JSON)
-                .when()
-                .body(reqBody)
-                .put("/public/v1/users/{id}");
-    }
+
 }

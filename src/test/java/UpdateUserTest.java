@@ -9,7 +9,7 @@ import static org.apache.http.HttpStatus.SC_OK;
 public class UpdateUserTest {
     @Test
     public void UserUpdate() {
-        GoRestService.updateUser()
+       UtilClass.updateUser()
                 .then()
                 .assertThat()
                 .statusCode(SC_OK)
