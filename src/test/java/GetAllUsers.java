@@ -8,7 +8,9 @@ import static org.hamcrest.CoreMatchers.hasItem;
 public class GetAllUsers {
     @Test
     public void Users_GetAllUsers(){
-        GoRestService.getAllUsers()
+        //I created a UtilClass as your GoRestService
+        // Because as testers we don't work on the main package and its classes.
+        UtilClass.getAllUsers()
                 .then()
                 .assertThat()
                 .statusCode(SC_OK)
