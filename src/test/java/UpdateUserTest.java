@@ -9,6 +9,7 @@ import static org.apache.http.HttpStatus.SC_OK;
 public class UpdateUserTest {
     @Test
     public void UserUpdate() {
+        // To update a data I need an id, to reach an id in database I created first getRequest
        UtilClass.updateUser()
                 .then()
                 .assertThat()
